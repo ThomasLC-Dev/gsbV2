@@ -1,0 +1,512 @@
+/*
+#####################################
+GENERAL
+#####################################
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form input{
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #A8A8A8;
+    font-size: 1.1em;
+    color: #A8A8A8;
+}
+
+form input:focus{
+    border-bottom: 1px solid #66A3D3;
+}
+
+form button{
+    border: none;
+    background: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.err-message{
+    display: inline-block;
+    margin-top: 10px;
+    color: #fa7373;
+}
+
+/*
+#####################################
+LOGIN PAGE
+#####################################
+*/
+
+.login{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.login .left{
+    flex: 2.5;
+    background-color: #66A3D3;
+    text-align: center;
+}
+
+.login .left img{
+    width: 55vw;
+    margin-top: 5%;
+}
+
+.login .right{
+    flex: 1;
+    text-align: center;
+}
+
+.login .right .logo{
+    width: 300px;
+    margin-top: 7%;
+}
+
+.login-form{
+    margin-top: 100px;
+    text-align: center;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form input{
+    width: 400px;
+    margin: 13px 0;
+    padding: 3px 0 12px 2px;
+}
+
+.input-div{
+    position: relative;
+    text-align: center;
+}
+
+.input-div label{
+    font-size: 1.1em;
+    position: absolute;
+    bottom: 26px;
+    left: 22px;
+    transition: 0.3s transform;
+    cursor: text;
+    color: #A8A8A8;
+}
+
+.input-div input:focus + label, .input-div input:valid + label{
+    transform: translateY(-30px);
+    font-size: 0.9em;
+    transition: 0.3s transform;
+}
+
+.input-div label img{
+    width: 24px;
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+.input-div input:focus +label img, .input-div input:valid +label img{
+    width: 18px;
+    margin-bottom: -3px;
+    margin-right: 3px;
+}
+
+.login-form button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 180px;
+    background-color: #66A3D3;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 50px;
+    margin-top: 120px;
+    margin-bottom: 3px;
+}
+
+/*
+#####################################
+DASHBOARD PAGE
+#####################################
+*/
+
+.blur{
+	filter: blur(5px);
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.dashboard header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.dashboard header .logo{
+    height: 75px;
+}
+
+.dashboard .header-right{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    font-size: 1.3em;
+    color: #66A3D3;
+    font-weight: 600;
+    align-items: center;
+}
+
+.dashboard .header-right img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.dashboard main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 85vh;
+}
+
+.dashboard .register-costs, .dashboard .consult-costs{
+    flex: 1;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.dashboard .register-costs{
+    border-right: 1px solid #A8A8A8;
+}
+
+.dashboard h1{
+    color: #66A3D3;
+}
+
+.dashboard main h2{
+    color: #123E6A;
+}
+
+.dashboard .register-costs form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard .form{
+    display: flex;
+    width: 650px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dashboard main input{
+    width: 100%;
+    margin: 13px 0;
+    padding: 3px 0 12px 2px;
+}
+
+.dashboard .register-costs .list{
+    width: 80%;
+    height: 20vh;
+    margin-top: 40px;
+    border: 1px solid #A8A8A8;
+    overflow-y: scroll;
+}
+
+.dashboard .register-costs .list .element{
+    display: flex;
+    margin: 0 20px;
+    padding: 15px 5px;
+    border-bottom: 1px solid #A8A8A8;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard .register-costs .list .element span{
+    flex: 1;
+    color: #7a7a7a;
+}
+
+.dashboard .register-costs .list .element img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.dashboard .register-costs .total{
+    color: #7a7a7a;
+    margin: 20px;
+    font-size: 1.2em;
+}
+
+.dashboard .buttons{
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+}
+
+.dashboard main .buttons button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 180px;
+    background-color: #66A3D3;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-bottom: 3px;
+}
+
+.dashboard .consult-costs .list{
+    margin: 50px;
+    height: 75%;
+    overflow-y: scroll;
+}
+
+.dashboard .consult-costs .list .element{
+    display: flex;
+    margin: 0 20px;
+    padding: 15px;
+    border-bottom: 1px solid #A8A8A8;
+    justify-content: space-between;
+    align-items: center;
+    color: #7a7a7a;
+}
+
+.dashboard .consult-costs .list .element span{
+    width: 150px;
+}
+
+.dashboard .consult-costs .list img{
+    width: 30px;
+    cursor: pointer;
+}
+
+/*
+#####################################
+POPUP
+#####################################
+*/
+
+.popup{
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 180px;
+	width: 800px;
+	background: white;
+	padding: 20px;
+	border: 2px solid #66A3D3;
+}
+
+.open-popup{
+	visibility: visible;
+}
+
+.dashboard .popup .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .popup .header img{
+    width: 40px;
+    cursor: pointer;
+}
+
+.dashboard .popup form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #A8A8A8;
+    padding-top: 40px;
+}
+
+.dashboard .popup input{
+    width: 150px;
+}
+
+.dashboard .popup button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 180px;
+    background-color: #66A3D3;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 50px;
+}
+
+/*
+#####################################
+Fiche Frais Details
+#####################################
+*/
+
+.fiche-frais-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.fiche-frais-details header{
+    width: 100%;
+    height: 80px;
+    padding: 10px 40px;
+}
+
+.fiche-frais-details header .logo{
+    height: 100px;
+}
+
+.fiche-frais-details .fiche-details{
+    margin-top: 50px;
+}
+
+.fiche-frais-details .fiche-details span{
+    display: inline-block;
+    padding: 3px 10px;
+}
+
+.fiche-frais-details .fiche-details span.etat{
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+.fiche-frais-details .fiche-details span.RB{
+    background-color: #a4fa73;
+}
+
+.fiche-frais-details .fiche-details span.VA{
+    background-color: #faf873;
+}
+
+.fiche-frais-details .fiche-details span.CR{
+    background-color: #fab073;
+}
+
+.fiche-frais-details .fiche-details span.CL{
+    background-color: #fa7373;
+}
+
+.fiche-frais-details .frais-forfait{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.fiche-frais-details .frais-forfait span{
+    display: flex;
+    width: 250px;
+    padding: 10px 40px;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #66A3D3;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.fiche-frais-details .frais-forfait span img{
+    margin-right: 10px;
+}
+
+.fiche-frais-details .frais-hors-forfait{
+    margin-top: 40px;
+}
+
+.fiche-frais-details .frais-hors-forfait .element{
+    display: flex;
+    margin: 0 20px;
+    padding: 15px 5px;
+    border-top: 1px solid #A8A8A8;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fiche-frais-details .frais-hors-forfait .element span{
+    flex: 1;
+    color: #7a7a7a;
+}
+
+.fiche-frais-details .fiche-frais-montant span{
+    display: inline-block;
+    background-color: #123E6A;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.fiche-frais-details .fab{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #123E6A;
+    border-radius: 50px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.fiche-frais-details .fab img{
+    width: 35px;
+    height: 35px;
+}
+
+/*
+#####################################
+RESPONSIVE
+#####################################
+*/
+
+@media (max-width: 1615px){
+    .login .left{
+        flex: 2;
+    }
+}
+
+@media (max-width: 1495px){
+    .login .left{
+        display: none;
+    }
+}
+
+@media print{
+    .fiche-frais-details .fab{
+        display: none;
+    }
+}
