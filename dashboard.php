@@ -164,9 +164,9 @@ if(isset($_POST['add-frais-hors-forfait'])){
             <img src="img/close.svg" onclick="closePopup()">
         </div>
         <form method="POST" action="" id="frais-hors-forfait-form">
-            <input type="text" placeholder="Libellé" name="libelle">
-            <input type="date" placeholder="Date" name="date" min="<?= $min ?>" max="<?= $max ?>">
-            <input type="number"  placeholder="Montant" name="montant">
+            <input type="text" placeholder="Libellé" name="libelle" required>
+            <input type="date" placeholder="Date" name="date" min="<?= $min ?>" max="<?= $max ?>" required>
+            <input type="number"  placeholder="Montant" name="montant" required>
             <button type="submit" name="add-frais-hors-forfait">Ajouter</button>
         </form>
     </div>
